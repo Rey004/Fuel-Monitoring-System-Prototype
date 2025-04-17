@@ -5,7 +5,8 @@
 
 // Tank parameters
 const float TANK_EMPTY_DISTANCE = 15.11; // Distance reading when tank is empty (in cm)
-const float TANK_FULL_DISTANCE = .0;   // Distance reading when tank is full (in cm)
+const float TANK_FULL_DISTANCE = 1.0;   // Distance reading when tank is full (in cm)
+const float TOTAL_VOLUME_LITERS = 1.0; // Total volume of the container in liters - ADJUST THIS VALUE
 
 // Timer interval (milliseconds)
 const unsigned long MEASUREMENT_INTERVAL = 1000;
@@ -14,6 +15,7 @@ unsigned long lastMeasurementTime = 0;
 long duration;
 float distance; // in cm
 float waterLevelPercent; // Water level in percentage
+float currentVolume; // Current water volume in liters
 
 void setup() {
   Serial.begin(115200);
@@ -49,6 +51,9 @@ void measureWaterLevel() {
     waterLevelPercent = 100 * (TANK_EMPTY_DISTANCE - distance) / (TANK_EMPTY_DISTANCE - TANK_FULL_DISTANCE);
   }
 
+  // Calculate current volume based on percentage
+  currentVolume = (waterLevelPercent / 100.0) * TOTAL_VOLUME_LITERS;
+
   // Print the distance and water level
   Serial.print("Distance from sensor: ");
   Serial.print(distance);
@@ -58,9 +63,15 @@ void measureWaterLevel() {
   Serial.print(waterLevelPercent);
   Serial.println("%");
   
-  Serial.print("Water Reduction: ");
-  Serial.print(100 - waterLevelPercent);
-  Serial.println("%");
+  Serial.print("Water Volume: ");
+  Serial.print(currentVolume);
+  Serial.print(" L / ");
+  Serial.print(TOTAL_VOLUME_LITERS);
+  Serial.println(" L");
+  
+  Serial.print("Remaining Capacity: ");
+  Serial.print(TOTAL_VOLUME_LITERS - currentVolume);
+  Serial.println(" L");
   
   Serial.println(); // Empty line for better readability
 }
