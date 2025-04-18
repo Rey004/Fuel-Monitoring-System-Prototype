@@ -28,7 +28,7 @@ A simple and effective ESP32-based IoT system to monitor water/fuel levels, usag
 
 | App Screenshot | Circuit |
 |----------------|---------|
-| <img src="gui of fuel monitoring system.jpg" width="200"/> | <img src="circuit.png" width="200"/> |
+| <img src="gui of fuel monitoring system.jpg" width="200"/> | <img src="circuit.png" width="200"/> </br> 🔔 Note: </br> TP4056 is used in the physical setup </br>to power the ESP32 via a 3.7V Li-ion battery.|
 
 ---
 
@@ -42,6 +42,18 @@ A simple and effective ESP32-based IoT system to monitor water/fuel levels, usag
 | GND          | GND       |
 | TP4056 OUT+  | VIN       |
 | TP4056 OUT−  | GND       |
+
+---
+
+## 📲 Virtual Pin Configuration for Blynk UI
+
+| Virtual Pin  | Feature                               | Widget                     |
+|--------------|---------------------------------------|----------------------------|
+| V0           | Water Level                           | Gauge                      |
+| V1           | Volume of fuel, </br> Fuel Level Trend| Value Display & SuperChart |
+| V2           | Remaining Capacity of Tank            | Value Display              | 
+| V3           | Fuel Usage Rate                       | Gauge                      |
+| V4           | Distance                              | Value Display              |
 
 ---
 
