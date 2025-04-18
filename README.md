@@ -28,7 +28,7 @@ A simple and effective ESP32-based IoT system to monitor water/fuel levels, usag
 
 | App Screenshot | Circuit |
 |----------------|---------|
-| <img src="alert message.jpg" width="200"/> | <img src="https://i.imgur.com/E7kqNHH.png" width="200"/> |
+| <img src="gui of fuel monitoring system.jpg" width="200"/> | <img src="https://i.imgur.com/E7kqNHH.png" width="200"/> |
 
 ---
 
