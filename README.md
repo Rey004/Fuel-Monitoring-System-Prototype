@@ -28,7 +28,7 @@ A simple and effective ESP32-based IoT system to monitor water/fuel levels, usag
 
 | App Screenshot | Circuit |
 |----------------|---------|
-| <img src="https://i.imgur.com/INkmRsl.png" width="200"/> | <img src="https://i.imgur.com/E7kqNHH.png" width="200"/> |
+| <img src="alert message.jpg" width="200"/> | <img src="https://i.imgur.com/E7kqNHH.png" width="200"/> |
 
 ---
 
@@ -48,6 +48,8 @@ A simple and effective ESP32-based IoT system to monitor water/fuel levels, usag
 ## 🔔 Alert Logic
 
 Low fuel notification is triggered when level drops below 20%.
+</br>
+<img src="alert message.jpg" width="200"/>
 
 ---
 
