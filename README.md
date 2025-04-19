@@ -74,7 +74,7 @@ Low fuel notification is triggered when level drops below 20%.
 
 ---
 
-[Project Report](https://github.com/Rey004/Fuel-Monitoring-System-Prototype/blob/096f78258111b2cbaccc75b96e6b263eb9f4f059/Fuel_Water_Monitoring_System.pdf)
+[Project Report](https://github.com/Rey004/Fuel-Monitoring-System-Prototype/blob/ddc64ab246e2726cc18036a2c40b5d61e6619c3d/Fuel_Water_Monitoring_System.pdf)
 
 ---
 
